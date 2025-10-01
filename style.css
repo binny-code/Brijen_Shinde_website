@@ -1,0 +1,122 @@
+/* ---------- reset ---------- */
+*, *::before, *::after { box-sizing: border-box; }
+body { margin: 0; font-family: "Inter", sans-serif; line-height: 1.6; color: #ccd6f6; background: #020c1b; }
+h1, h2, h3 { font-family: "Lora", serif; font-weight: 600; }
+a { color: #00d1ff; text-decoration: none; }
+a:hover { color: #92feff; text-decoration: underline; }
+
+/* ---------- universal centering ---------- */
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 100vh;
+}
+
+/* ---------- layout ---------- */
+header, main, footer {
+  width: 100%;
+  max-width: 760px;
+  padding: 1.5rem 1.25rem;
+}
+header { border-bottom: 1px solid #1e2a3a; }
+footer { margin-top: auto; font-size: 0.8rem; color: #8892b0; text-align: center; }
+
+/* ---------- header ---------- */
+h1 { margin: 0 0 0.2rem; font-size: 2.2rem; color: #e6f1ff; text-align: center; }
+.tagline { margin: 0 0 1rem; color: #a8b2d1; text-align: center; }
+nav {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 1.25rem;
+  font-weight: 500;
+  font-size: 0.95rem;
+}
+
+/* ---------- sections ---------- */
+section { margin-bottom: 2.5rem; width: 100%; }
+h2 {
+  font-size: 1.5rem;
+  margin-bottom: 0.75rem;
+  border-bottom: 1px solid #1e2a3a;
+  padding-bottom: 0.3rem;
+  color: #e6f1ff;
+  text-align: center;
+}
+h3 {
+  font-size: 1.2rem;
+  margin-bottom: 0.4rem;
+  color: #e6f1ff;
+  text-align: center;
+}
+time {
+  float: right;
+  font-weight: normal;
+  font-size: 0.9rem;
+  color: #8892b0;
+}
+
+/* ---------- lists ---------- */
+ul.dense {
+  margin: 0 auto;
+  padding-left: 1.2rem;
+  max-width: 90%;
+}
+ul.dense li { margin-bottom: 0.35rem; }
+
+/* ---------- archive (ORIGINAL ALIGNMENT KEPT) ---------- */
+ul.archive {
+  list-style: none;
+  padding-left: 0;
+  margin: 0;               /* override centering for this block */
+}
+ul.archive li {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 0.5rem;
+  justify-content: flex-start; /* left-align like original */
+}
+ul.archive time {
+  position: static;
+  flex: 0 0 5rem;
+  font-variant-numeric: tabular-nums;
+}
+
+/* ---------- table ---------- */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.95rem;
+  margin: 0 auto;
+}
+th, td {
+  padding: 0.55rem 0.75rem;
+  text-align: center;
+  border-bottom: 1px solid #1e2a3a;
+}
+th {
+  background: #0a192f;
+  font-weight: 600;
+  color: #e6f1ff;
+}
+
+/* ---------- cert-card ---------- */
+.cert-card {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+.cert-card img {
+  margin: 0.5rem auto 0;
+  display: block;
+}
+
+/* ---------- utils ---------- */
+.quiet { color: #8892b0; font-size: 0.9rem; text-align: center; }
+
+/* ---------- responsive ---------- */
+@media (max-width: 600px) {
+  header, main, footer { padding: 1rem; }
+  nav { flex-direction: column; align-items: center; }
+  time { float: none; display: block; margin-top: 0.25rem; text-align: center; }
+}
